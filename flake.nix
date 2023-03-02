@@ -10,7 +10,7 @@
     let
       pkgs = nixpkgs.legacyPackages.${system};
       tex = pkgs.texlive.combine {
-          inherit (pkgs.texlive) scheme-basic 
+          inherit (pkgs.texlive) scheme-small
           
           latex-uni8 # replaces fontenc I think
           # textcomp
