@@ -2,7 +2,7 @@
 
 \usepackage[T1]{fontenc} % Apparently this https://tex.stackexchange.com/questions/287312/font-not-loadable-metric-data-not-found-or-bad
 \usepackage[full]{textcomp}
-% \usepackage{cabin} % sans serif
+\usepackage{cabin} % sans serif
 \usepackage[varqu,varl]{inconsolata} % sans serif typewriter
 \usepackage[final,expansion=alltext]{microtype}
 \usepackage[english]{babel}
@@ -17,12 +17,12 @@
 
 % geometry of the page
 
-\usepackage[
-    top=1in,
-    bottom=1in,
-    left=1in,
-    right=1in
-    ]{geometry}
+% \usepackage[
+%     top=1in,
+%     bottom=1in,
+%     left=1in,
+%     right=1in
+%     ]{geometry}
 
 % paragraph spacing
 
@@ -46,10 +46,10 @@
 \usepackage{hyperref}
 
 % Section formatting using titlesec
-\usepackage{titlesec}
-\titleformat*{\section}{\sffamily\large}
-\titleformat*{\subsection}{\sffamily\normalsize}
-\titleformat*{\subsubsection}{\itshape\normalsize}
+% \usepackage{titlesec}
+% \titleformat*{\section}{\sffamily\large}
+% \titleformat*{\subsection}{\sffamily\normalsize}
+% \titleformat*{\subsubsection}{\itshape\normalsize}
 
 % center figures by default
 \makeatletter
@@ -71,3 +71,10 @@
 \newcommand{\diag}{\mathrm{diag}}
 \newcommand{\ave}{\mathrm{ave}}
 \renewcommand\vec{\boldsymbol}
+
+% Beamer additions
+\setbeamertemplate{frametitle}[default][center]
+% \setbeamertemplate{frametitle}{\textit{\insertframetitle}}    
+\setbeamerfont{frametile}{shape=\itshape} % not working
+\usecolortheme{seagull} % black and white
+\usefonttheme{professionalfonts} % https://tex.stackexchange.com/questions/342036/beamer-xelatex-math-font-resets-to-sans-serif

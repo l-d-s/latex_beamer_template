@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt]{beamer}
 % [fleqn] left-aligns all equations
 
 \input{preamble}
@@ -12,68 +12,35 @@
 
 \begin{document}
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % %
-\maketitle
-% \vspace{0.1in}
-% % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{frame}
+    \titlepage
+\end{frame}
 
-\begin{abstract}\noindent
-
-    Four sentences: 
-    State the problem. 
-    Why it's an interesting problem.
-    What your solution achieves.
-    What follows from your solution.
-    % State the problem
-    
-    % Why it's an interesting problem
-    
-    % What your solution achieves
-    
-    % What follows from your solution
-    
-\end{abstract}
+\begin{frame}
+    \tableofcontents
+\end{frame}
 
 \section{Introduction}
-% Describe the problem
-% Use an example to introduce it
-\subsubsection*{Describe the problem}
+%% normal frame
+\begin{frame}{Frame title}
+    The body of the frame.
+\end{frame}
 
-Use an example to introduce it.
+\section{Section 1}
 
-% State your contributions
-% Explicit list, to be backed up with evidence
-\subsubsection*{State your contributions}
-
-Use an explicit list, to be backed up by evidence.
-
-\section{The problem}
-
-Describe the problem, in 1 page.
-
-\section{The main idea}
-
-
-Describe your idea, in 2 pages.
-
-
-
-\section{The idea in detail}
-
-Peyton-Jones suggests 5 pages for this.
-
-\section{Related work}
-
-Put this last. 1-2 pages; be generous with credit.
-
-
-
-\section{Conclusions and further work}
-
-\printbibliography
-
-\newpage
-
-\section*{Appendix}
+\begin{frame}
+    \frametitle{Math test}
+    Generalized linear model:
+    \begin{align*}
+        y_i &\sim \text{ExpDisp}(\mu_i, \phi) \\
+        g(\mu_i) &= \eta_i \\
+        \eta_i &= \sum_p x_i^p \beta_p
+    \end{align*}
+    Quasi-likelihood interpretation:
+    \begin{align*}
+        y_i &\sim \text{mean } \mu_i, \text{ variance } v = v(\mu_i)
+    \end{align*}
+    where $v(\cdot)$ is the variance function.
+\end{frame}
 
 \end{document}
