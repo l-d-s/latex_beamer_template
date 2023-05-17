@@ -67,14 +67,16 @@
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\E}{\mathrm{E}}
 \renewcommand{\P}{\mathrm{P}}
-\newcommand{\N}{\mathrm{N}}
-\newcommand{\diag}{\mathrm{diag}}
-\newcommand{\ave}{\mathrm{ave}}
 \renewcommand\vec{\boldsymbol}
 
 % Beamer additions
 \setbeamertemplate{frametitle}[default][center]
 % \setbeamertemplate{frametitle}{\textit{\insertframetitle}}    
 \setbeamerfont{frametile}{shape=\itshape} % not working
+\usetheme{Boadilla} % puts bar at the bottom....
+\setbeamertemplate{itemize items}[circle] % ... but use normal enumerate etc
+% \setbeamertemplate{section in toc}[square]
+\setbeamertemplate{section in toc}{\textcolor[HTML]{AAAAAA}{$\bullet$}~~\inserttocsection}
 \usecolortheme{seagull} % black and white
-\usefonttheme{professionalfonts} % https://tex.stackexchange.com/questions/342036/beamer-xelatex-math-font-resets-to-sans-serif
+% https://tex.stackexchange.com/questions/342036/beamer-xelatex-math-font-resets-to-sans-serif
+\usefonttheme{professionalfonts}
