@@ -38,9 +38,10 @@
 
 % Leon additions
 
-\usepackage{enumitem} % allows for enumerate[resume]
+% \usepackage{enumitem} % allows for enumerate[resume]
+% broken: see https://amytabb.com/til/2022/05/05/beamer-and-enumerate-errors/
 \usepackage[style=authoryear-comp, natbib=true]{biblatex} % natbib=true allows \citep
-% \addbibresource{my_library.bib}
+\addbibresource{my_library.bib}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{hyperref}
@@ -74,8 +75,14 @@
 % \setbeamertemplate{frametitle}{\textit{\insertframetitle}}    
 \setbeamerfont{frametile}{shape=\itshape} % not working
 \usetheme{Boadilla} % puts bar at the bottom....
-% \setbeamertemplate{itemize items}[circle] % ... but use normal enumerate etc
+\setbeamertemplate{itemize item}      [circle] % ... but use normal enumerate etc
+\setbeamertemplate{itemize subitem}   [triange]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamercolor{itemize item}      {fg=lightgray}
+\setbeamercolor{itemize subitem}   {fg=lightgray}
+\setbeamercolor{itemize subsubitem}{fg=lightgray}
 % \setbeamertemplate{section in toc}[square]
+\setbeamertemplate{enumerate items}[default] % get rid of bubbles
 \setbeamertemplate{section in toc}{\textcolor[HTML]{AAAAAA}{$\bullet$}~~\inserttocsection}
 \usecolortheme{seagull} % black and white
 % https://tex.stackexchange.com/questions/342036/beamer-xelatex-math-font-resets-to-sans-serif
